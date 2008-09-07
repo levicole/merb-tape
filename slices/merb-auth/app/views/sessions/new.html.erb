@@ -1,0 +1,18 @@
+<div id="setup">
+	<div id="setup_form">
+		<%= form :action => url(:login) do -%>
+		<p><label for="email">Email</label><br/>
+		<%= text_field :name => "email", :class => "text" %></p>
+
+		<p><label for="password">Password</label><br/>
+		<%= password_field :name => "password", :class => "text" %></p>
+
+		<!-- Uncomment this if you want this functionality
+		<p><label for="remember_me">Remember me:</label>
+		<%= check_box :name => 'remember_me' %></p>
+		-->
+
+		<p><%= button 'Log in' %></p>
+		<% end =%>
+	</div>
+</div>

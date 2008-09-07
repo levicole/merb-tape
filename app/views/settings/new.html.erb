@@ -1,0 +1,25 @@
+<div id="setup">
+	<div id="setup_form">
+		<%= error_messages_for @user %>
+		<%= form_for :user, :action => url(MA[:routes][:user][:index]) do %>
+		  <p>
+		    <%= text_field :email, :label => "Email", :class => "text" %>
+		  </p>
+		  <p>
+		    <%= text_field :login, :label => "Nickname", :class=> "text" %>
+		  </p>
+		  <p>
+		    <%= password_field :password, :class => "text", :label => "Password" %>
+		  </p>
+		  <p>
+		    <%= password_field :password_confirmation, :label => "Password Confirmation", :class => "text" %>
+		  </p>
+		  <p>
+		    <%= button "Sign up" %>
+		  </p>
+		<% end =%>
+	</div>
+	<!-- <div style="clear:both">
+		
+	</div> -->
+</div>

@@ -1,0 +1,25 @@
+<div id="look" class="ui-tabs-panel admin-panel">
+	<h4>Your Mix Tapes Settings</h4>
+	<%= form_for :setting, :action => url(:setting, @setting.id), :method => :put do %>
+		<p>
+			<label for="title">Title:</label><br />
+			<%= text_field :title, :class => "text" %>
+		</p>
+		<p>
+			<label for="sub-title">Sub-title:</label><br />
+			<%= text_field :subtitle, :class => "text" %>
+		</p>
+		<p>
+			<h4>Header Settings</h4>
+			<p>
+				<label for="sub-title">Background Color:</label><br />
+				<%= text_field :header_background, :class => "text" %>
+			</p>
+			<p>
+				<label for="sub-title">Forground Color:</label><br />
+				<%= text_field :header_foreground, :class => "text" %>
+			</p>
+		</p>
+		<%= button "Save", :class => "button positive" %>
+	<% end =%>
+</div>

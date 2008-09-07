@@ -1,0 +1,1133 @@
+/* -------------------------------------------------------------- 
+  
+   reset.css
+   * Resets default browser CSS.
+   
+-------------------------------------------------------------- */
+@import "./buttons.css";
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body { 
+  line-height: 1.5; 
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+table, td, th { vertical-align: middle; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img { border: none; }
+
+/* -------------------------------------------------------------- 
+   
+   typography.css
+   * Sets up some sensible default typography.
+      
+-------------------------------------------------------------- */
+
+/* Default font settings. 
+   The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+body { 
+  font-size: 75%;
+  color: #222; 
+  background: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; color: #111; }
+
+h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; height: 1.25em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+h6 { font-size: 1em; font-weight: bold; }
+
+h1 img, h2 img, h3 img, 
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p           { margin: 0 0 1.5em; }
+p img       { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+
+a:focus, 
+a:hover     { color: #000; }
+a           { color: #009; text-decoration: underline; }
+
+blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+strong      { font-weight: bold; }
+em,dfn      { font-style: italic; }
+dfn         { font-weight: bold; }
+sup, sub    { line-height: 0; }
+
+abbr, 
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin: 0 0 1.5em; font-style: italic; }
+del         { color:#666; }
+
+pre,code    { margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; } 
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+li ul, 
+li ol       { margin:0 1.5em; }
+ul, ol      { margin: 0 1.5em 1.5em 1.5em; }
+
+ul          { list-style-type: disc; }
+ol          { list-style-type: decimal; }
+
+dl          { margin: 0 0 1.5em 0; }
+dl dt       { font-weight: bold; }
+dd          { margin-left: 1.5em;}
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+table       { margin-bottom: 1.4em; width:100%; }
+th          { font-weight: bold; background: #C3D9FF; }
+th,td       { padding: 4px 10px 4px 5px; }
+tr.even td  { background: #E5ECF9; }
+tfoot       { font-style: italic; }
+caption     { background: #eee; }
+
+
+/* Misc classes
+-------------------------------------------------------------- */
+
+.small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.hide       { display: none; }
+
+.quiet      { color: #666; }
+.loud       { color: #000; }
+.highlight  { background:#ff0; }
+.added      { background:#060; color: #fff; }
+.removed    { background:#900; color: #fff; }
+
+.first      { margin-left:0; padding-left:0; }
+.last       { margin-right:0; padding-right:0; }
+.top        { margin-top:0; padding-top:0; }
+.bottom     { margin-bottom:0; padding-bottom:0; }
+
+
+/* -------------------------------------------------------------- 
+   
+   forms.css
+   * Sets up some default styling for forms
+   * Gives you classes to enhance your forms
+   
+   Usage:
+   * For text fields, use class .title or .text
+   
+-------------------------------------------------------------- */
+
+label       { font-weight: bold; }
+fieldset    { padding:1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc; }
+legend      { font-weight: bold; font-size:1.2em; }
+
+
+/* Form fields
+-------------------------------------------------------------- */
+
+input.text, input.title,
+textarea, select {
+  margin:0.5em 0;
+  border:1px solid #bbb;
+}
+
+input.text:focus, input.title:focus,
+textarea:focus, select:focus {
+  border:1px solid #666;
+}
+
+input.text, 
+input.title   { width: 90%; padding:5px; }
+input.title   { font-size:1.5em; }
+textarea      { width: 390px; height: 250px; padding:5px; }
+
+
+/* Success, notice and error boxes
+-------------------------------------------------------------- */
+
+.error,
+.notice, 
+.success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd; }
+
+.error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
+.notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }
+.success    { background: #E6EFC2; color: #264409; border-color: #C6D880; }
+.error a    { color: #8a1f11; }
+.notice a   { color: #514721; }
+.success a  { color: #264409; }
+
+
+
+
+
+
+body {
+	background:#F4F4F4;
+}
+
+#container {
+	padding-top:60px;
+	width:100%;
+	min-width:950px;
+}
+
+#header {
+	position: fixed;
+	width:100%;
+	height:60px;
+}
+
+#header h2 {
+	font-size:16px;
+	font-weight: bold;
+	padding:5px 0 0 20px;
+}
+
+#header h3 {
+	font-size:12px;
+	font-weight: bold;
+	margin-top:-10px;
+	padding:0 0 0 20px;
+}
+
+#header a{text-decoration: none;}
+/*admin section*/
+
+#container #left_side {float:left;width:74%;}
+#container #right_side {position:fixed;
+	width:25%;
+	top:60px;
+	right:0;
+	height:100%;
+	padding:0.3em;
+	z-index: 20;
+	background:#F4F4F4;
+	}
+
+#right_side ul#tabs {
+	width:100%;
+	float:left;
+	list-style: none;
+	margin-left:0;
+	margin-bottom:0;
+}
+
+ul#tabs li {
+	display: inline;
+	float:left;
+	height:20px;
+	padding:5px;
+	background-color: #fff;
+	margin-right:0.5em;
+}
+
+ul#tabs li a {
+	
+}
+
+.songlist {
+	list-style:none;margin:0;
+}
+
+.songlist li {
+	color: #EDEDED;
+	float:left;width:100%;
+	padding: 1em 0.5em 0 0.3em;
+	font-size:20px;
+	height:50px;
+	background-color:#AAA;
+	border-bottom: 1px solid #fff
+}
+
+#setup { width:400px;margin:100px auto;background-color: #fff;border: 10px solid #999;padding:10px;}
+#setup p { width:100%; clear: both;}
+/*#setup #setup_form {float: left;}*/
+
+.admin-panel {float:left;width:100%}
+/* Caution! Ensure accessibility in print and other media types... */
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .ui-tabs-hide {
+        display: none;
+    }
+}
+
+/* Hide useless elements in print layouts... */
+@media print {
+    .ui-tabs-nav {
+        display: none;
+    }
+}
+
+/* Skin */
+.ui-tabs-nav, .ui-tabs-panel {
+    font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+.ui-tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 0px;
+}
+.ui-tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block;
+    clear: both;
+    content: " ";
+}
+.ui-tabs-nav li {
+    float: left;
+    margin: 0 0.4em 0 0px;
+    font-weight: bold;
+}
+.ui-tabs-nav a, .ui-tabs-nav a span {
+    float: left; /* fixes dir=ltr problem and other quirks IE */
+    padding: 0 12px;
+/*    background: url(i/tabs.png) no-repeat;*/
+}
+.ui-tabs-nav a {
+    margin: 0 0 0; /* position: relative makes opacity fail for disabled tab in IE */
+    padding-left: 0;
+    background-position: 100% 0;
+    text-decoration: none;
+    white-space: nowrap; /* @ IE 6 */
+    outline: 0; /* @ Firefox, prevent dotted border after click */    
+}
+.ui-tabs-nav a:link, .ui-tabs-nav a:visited {
+    color: #000;
+}
+.ui-tabs-nav .ui-tabs-selected a {
+    z-index: 2;
+    margin-top: 0;
+		background-color: #fff;
+}
+.ui-tabs-nav a span {
+    padding-right: 0;
+    height: 27px;
+    background-position: 0 0;
+    line-height: 27px;
+}
+.ui-tabs-nav .ui-tabs-selected a span {
+    padding-top: 0;
+    height: 27px;
+    line-height: 27px;
+}
+.ui-tabs-nav .ui-tabs-selected a:link, .ui-tabs-nav .ui-tabs-selected a:visited,
+.ui-tabs-nav .ui-tabs-disabled a:link, .ui-tabs-nav .ui-tabs-disabled a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
+    cursor: text;
+}
+.ui-tabs-nav a:hover, .ui-tabs-nav a:focus, .ui-tabs-nav a:active,
+.ui-tabs-nav .ui-tabs-unselect a:hover, .ui-tabs-nav .ui-tabs-unselect a:focus, .ui-tabs-nav .ui-tabs-unselect a:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer;
+}
+
+.ui-tabs-nav .ui-tabs-unselect, .ui-tabs-nav li {
+	background-color: #DDD;
+}
+
+.ui-tabs-disabled {
+    opacity: .4;
+    filter: alpha(opacity=40);
+}
+.ui-tabs-nav .ui-tabs-disabled a:link, .ui-tabs-nav .ui-tabs-disabled a:visited {
+    color: #000;
+}
+.ui-tabs-panel {
+	margin-top:0;
+    padding: 10px;
+    background: #fff; /* declare background color for container to avoid distorted fonts in IE while fading */
+}
+/*.ui-tabs-loading em {
+    padding: 0 0 0 20px;
+    background: url(loading.gif) no-repeat 0 50%;
+}*/
+
+/* Additional IE specific bug fixes... */
+* html .ui-tabs-nav { /* auto clear @ IE 6 & IE 7 Quirks Mode */
+    display: inline-block;
+}
+*:first-child+html .ui-tabs-nav  { /* auto clear @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */
+    display: inline-block;
+}
+
+
+/*
+
+ SoundManager 2: "page as playlist" example
+ ------------------------------------------
+
+ Clicks on links to MP3s are intercepted via JS, calls are
+ made to SoundManager to load/play sounds. CSS classes are
+ appended to the LI parent, which are used to highlight the
+ current play state and so on.
+
+ Class names are applied in addition to "sm2_link" base.
+
+ Default:
+
+ sm2_link
+
+ Additional states:
+
+ sm2_playing
+ sm2_paused
+
+ eg.
+
+ <!-- default -->
+ <li class="sm2_link"><a href="some.mp3">some.mp3</a></li>
+
+ <!-- playing -->
+ <li class="sm2_link sm2_playing"><a href="some.mp3">some.mp3</a></li>
+
+ The script also injects an HTML template containing control bar
+ and timing elements, which can also be targeted with CSS.
+
+
+ Note you don't necessarily require ul.playlist for your use
+ if only using one style on a page. You can just use .sm2_link
+ and so on, but isolate the CSS you want.
+
+ Side note: Would do multiple class definitions eg.
+
+ li.sm2_default.sm2_playing{}
+
+ .. except IE 6 has a parsing bug which may break behaviour,
+ applying sm2_playing {} even when the class is set to sm2_default.
+
+
+ If you want to make your own UI from scratch, here is the base:
+
+ Default + hover state, "click to play":
+
+ li.sm2_link {}
+ li.sm2_link:hover {}
+
+ Playing + hover state, "click to pause":
+
+ li.sm2_playing {}
+ li.sm2_playing:hover {}
+
+ Paused + hover state, "click to resume":
+
+ li.sm2_paused {}
+ li.sm2_paused:hover {}
+
+*/
+
+
+/* background-image-based CSS3 example */
+
+.spectrum-container {
+ display:none;
+}
+
+ul.use-spectrum li.sm2_playing .spectrum-container {
+ position:absolute;
+ left:0px;
+ top:0px;
+ margin-left:-266px;
+ /* margin-top:-10px; */
+ display:block;
+ background-color:#5588bb;
+ border:1px solid #99ccff;
+ -moz-border-radius:4px;
+}
+
+ul.use-spectrum .spectrum-box {
+ position:relative;
+ width:255px;
+ font-size:1em;
+ padding:2px 0px;
+ height:1em;
+ overflow:hidden;
+}
+
+ul.use-spectrum .spectrum-box .spectrum {
+ position:absolute;
+ left:0px;
+ top:-2px;
+ margin-top:20px;
+ display:block;
+ font-size:1px;
+ width:1px;
+ height:1px; /* set to 50px for a thick line, 1px for a thin line, etc. */
+ overflow:hidden;
+ background-color:#fff;
+}
+
+ul.playlist {
+ list-style-type:none;
+ margin:0px;
+ padding:0px;
+
+}
+
+ul.playlist li {
+ /* assume all items will be sounds rather than wait for onload etc. in this example.. may differ for your uses. */
+ position:relative;
+ display:block;
+ width:auto;
+ font-size:2em;
+ color:#666;
+ padding:0.25em 0.5em 0.25em 0.5em;
+ border:none;
+ letter-spacing:-1px; /* ZOMG WEB X.0. ;) */
+ background-color:#C7C7C7;
+ -webkit-transition-property: hover;
+ -webkit-transition: background-color 0.15s ease-in-out;
+}
+
+ul.playlist li a {
+ display:block;
+ text-decoration:none;
+ font-weight:normal;
+ color:#000;
+ font-size:120%;
+ outline:none;
+ position:relative;
+
+ z-index:2;
+ text-shadow: 0 0 0 #fff; /* stupid Safari "fat" font rendering tweak */
+}
+
+ul.playlist li.sm2_playing,
+ul.playlist li.sm2_paused,
+ul.playlist li.sm2_playing a {
+ color:#fff;
+}
+ul.playlist li:hover {
+	background-color:#DFDFDF;
+}
+
+ul.playlist li:hover a {
+ color:#333;
+}
+
+ul.playlist li.sm2_playing,
+ul.playlist li.sm2_playing:hover {
+ background-color:#515252;
+}
+
+ul.playlist li.sm2_paused {
+ background-color:#999;
+}
+
+ul.playlist li.sm2_playing:hover a,
+ul.playlist li.sm2_paused a {
+ color:#fff;
+}
+
+ul.playlist li .controls {
+ display:none;
+}
+
+ul.playlist li .peak,
+ul.playlist.use-peak li .peak {
+ display:none;
+ position:absolute;
+ top:0.55em;
+ right:0.5em;
+}
+
+ul.playlist li.sm2_playing .controls,
+ul.playlist li.sm2_paused .controls {
+ position:relative;
+ display:block;
+}
+
+ul.playlist.use-peak li.sm2_playing .peak,
+ul.playlist.use-peak li.sm2_paused .peak {
+ display:inline;
+ display:inline-block;
+}
+
+ul.playlist.use-peak li .peak {
+ display:none; /* IE 7 */
+}
+
+ul.playlist li.sm2_paused .controls {
+ background-color:#666;
+}
+
+ul.playlist li:hover .controls .statusbar {
+ position:relative;
+ cursor:ew-resize;
+ cursor:-moz-grab;
+ cursor:grab;
+}
+
+ul.playlist li.sm2_paused .controls .statusbar {
+ background-color:#ccc;
+}
+
+ul.playlist li .controls {
+ position:relative;
+ margin-top:0.25em;
+ margin-bottom:0.25em;
+ background-color:#99ccff;
+}
+
+ul.playlist li .controls .statusbar {
+ position:relative;
+ height:0.3em;
+ background-color:#cdf;
+ border:2px solid #fff;
+ overflow:hidden;
+ cursor:-moz-grab;
+ cursor:grab;
+}
+
+ul.playlist li .controls.dragging .statusbar {
+ cursor:-moz-grabbing;
+ cursor:grabbing;
+}
+
+ul.playlist li .controls .statusbar .position,
+ul.playlist li .controls .statusbar .loading,
+ul.playlist li .controls .statusbar .annotation {
+ position:absolute;
+ left:0px;
+ top:0px;
+ height:0.3em;
+}
+
+ul.playlist li .controls .statusbar .position {
+ background-color:#515252;
+ border-right:3px solid #515252;
+}
+
+ul.playlist li.sm2_paused .controls .statusbar .position {
+ background-color:#666;
+ border-color:#666;
+}
+
+ul.playlist li .controls .statusbar .loading {
+ background-color:#eee;
+}
+
+ul.playlist li .controls .statusbar .position,
+ul.playlist li .controls .statusbar .loading {
+ width:0px;
+}
+
+ul.playlist li.sm2_playing a.sm2_link,
+ul.playlist li.sm2_paused a.sm2_link {
+ margin-right:4.5em; /* room for timing stuff */
+}
+
+ul.playlist li .timing {
+ position:absolute;
+ display:none;
+ text-align:right;
+ right:1em;
+ right:1em;
+ top:1em;
+ width:auto;
+ height:1em;
+ /*
+ padding:4px 5px 2px 5px;
+ *padding:3px 5px 3px 5px;
+ */
+ padding:3px 5px;
+ background-color:#AAACA6;
+ -moz-border-radius:6px;
+ -khtml-border-radius:6px;
+ border-radius:6px;
+ letter-spacing:0px;
+ font:50% normal "lucida console",monaco,courier,terminal,system;
+ line-height:1em;
+ vertical-align:middle;
+}
+
+ul.playlist.use-peak li .timing {
+ right:3.5em;
+}
+
+ul.playlist li:hover .timing {
+ z-index:2;
+}
+
+ul.playlist li .timing div.sm2_timing {
+ margin:0px;
+ padding:0px;
+ margin-top:-1em;
+ text-shadow: 0 0 0 #fff; /* stupid Safari "fat" font rendering tweak */
+}
+
+ul.playlist li.sm2_playing .timing,
+ul.playlist li.sm2_paused .timing {
+ display:block;
+}
+
+ul.playlist li.sm2_paused .timing .sm2_position {
+ text-decoration:blink; /* hee hee. first actual appropriate use? :D */
+}
+
+ul.playlist li.sm2_paused .timing,
+ul.playlist.use-peak li.sm2_paused .peak {
+ background-color:#888;
+ border:1px solid #ccc;
+}
+
+/* peak data */
+
+/* ul.playlist ... */
+
+ul.playlist.use-peak li .peak {
+ display:none;
+ zoom:1;
+ border:1px solid #99ccff;
+ padding:2px;
+ height:0.55em;
+ -moz-border-radius:3px;
+ -khtml-border-radius:3px;
+ background-color:#5588bb;
+ width:0.8em;
+ height:0.55em;
+}
+
+ul.playlist.use-peak li .peak-box {
+ position:relative;
+ width:100%;
+ height:0.55em;
+ overflow:hidden;
+}
+
+ul.playlist li .peak .l,
+ul.playlist li .peak .r {
+ position:absolute;
+ left:0px;
+ top:0px;
+ width:7px;
+ height:50px;
+ background:#fff;
+ border:1px solid #fff;
+ -moz-border-radius:1px;
+ -khtml-border-radius:1px;
+ margin-top:1em;
+}
+
+ul.playlist li .peak .l {
+ margin-right:1px;
+}
+
+ul.playlist li .peak .r {
+ left:10px;
+}
+
+#control-template {
+ display:none;
+}
+
+/*
+ ------------------------------------------
+ -- annotations (sub-tracks, notes etc.) --
+ ------------------------------------------
+*/
+
+ul.playlist li a.sm2_link .metadata {
+ display:none; /* hide by default */
+}
+
+ul.playlist li.sm2_paused a.sm2_link .metadata,
+ul.playlist li.sm2_playing a.sm2_link .metadata {
+ display:inline;
+}
+
+ul.playlist li ul {
+ list-style-type:none;
+ margin:0px;
+ padding:0px;
+ position:relative;
+ font-size:small;
+ display:none;
+}
+
+ul.playlist li ul li {
+ position:relative;
+ margin:0px;
+ padding:2px 3px;
+ border:1px solid transparent;
+ -moz-border-radius:6px;
+ -khtml-border-radius:6px;
+ border-radius:6px;
+ margin-right:1em;
+ font-family:verdana,tahoma,arial,"sans serif";
+ font-size:x-small;
+ font-weight:lighter;
+ letter-spacing:0px;
+ background-color:transparent;
+ opacity:0.66;
+}
+
+ul.playlist li ul li:hover {
+ opacity:1;
+ background-color:#fff;
+ border-color:#ccc;
+ color:#666;
+}
+
+ul.playlist li.sm2_playing ul li,
+ul.playlist li.sm2_paused ul li {
+ color:#fff;
+}
+
+ul.playlist li.sm2_playing ul li:hover {
+ background-color:#fff;
+ color:#5588bb;
+ border-color:#336699;
+ opacity:0.9;
+}
+
+ul.playlist li.sm2_paused ul li:hover {
+ background-color:#888;
+}
+
+/* metadata */
+
+ul.playlist li .metadata .duration {
+ /* optional timing data */
+ display:none;
+}
+
+ul.playlist li .metadata ul li p {
+ margin:0px;
+ padding:0px;
+}
+
+ul.playlist li .metadata ul li span {
+ display:none;
+}
+
+ul.playlist li .controls .statusbar .annotation {
+ position:absolute;
+ background-color:transparent;
+ top:0px;
+ color:#666;
+ text-align:right;
+ margin-left:10px;
+ height:0.5em;
+}
+
+ul.playlist li .controls .statusbar .annotation:hover {
+ z-index:12; /* sit on top of note */
+}
+
+ul.playlist li .controls .statusbar .annotation span.bubble {
+ /* using &middot; */
+ display:inline-block;
+ background-color:#fff;
+ border:1px solid #666;
+ border-radius:6px;
+ -moz-border-radius:6px;
+ -webkit-border-radius:6px;
+}
+
+ul.playlist li .controls .statusbar .annotation span {
+ display:block;
+ background:transparent url(../image/divot.png) no-repeat 50% 0px;
+ width:15px;
+ margin-left:-15px;
+ height:12px;
+ text-align:center;
+}
+
+ul.playlist li .controls .statusbar .annotation.alt {
+ top:auto;
+ bottom:0px;
+}
+
+ul.playlist li .controls .statusbar .annotation span:hover {
+ cursor:none; /* Fx3 rules. */
+ margin-top:0.1em;
+}
+
+ul.playlist li .controls .statusbar .annotation.alt span:hover {
+ margin-top:-0.1em;
+}
+
+ul.playlist li .controls .statusbar .annotation.alt span {
+ background:transparent url(../image/divot-bottom.png) no-repeat 50% bottom;
+}
+
+ul.playlist li .note {
+ position:absolute;
+ display:none;
+ left:0px;
+ top:0px;
+ z-index:10;
+ font-size:x-small;
+ padding:2px 4px 2px 4px;
+ width:auto;
+ color:#666;
+ background-color:#fff;
+ border:1px solid #ccc;
+ border-radius:6px;
+ -moz-border-radius:6px;
+ -webkit-border-radius:6px;
+ font-style:normal;
+ font-weight:bold;
+ font-family:arial,tahoma,verdana,"sans serif";
+ letter-spacing:0px;
+ margin-top:1.1em;
+}
+
+ul.playlist li .note.alt {
+ margin-top:-1.32em;
+}
+
+ul.playlist li .note:hover {
+ display:block !important;
+}
+
+ul.playlist li .sm2_divider {
+ font-size:0.75em;
+}
+
+ul.playlist li .sm2_metadata {
+ font-size:0.65em;
+}
+
+
+/* 
+ ---------------------------------
+ -- alternate (optional) themes --
+ ---------------------------------
+*/
+
+ul.playlist.dark li.sm2_playing a {
+ color:#fff;
+}
+
+ul.playlist.dark li.sm2_playing .timing,
+ul.playlist.use-peak.dark li.sm2_playing .peak {
+ color:#999;
+}
+
+ul.playlist.use-spectrum.dark li.sm2_playing .spectrum-container {
+ background-color:#222;
+ border-color:#444;
+}
+
+ul.playlist.use-spectrum.dark li.sm2_playing .spectrum-container .spectrum {
+ background-color:#999;
+}
+
+ul.playlist.dark li.sm2_paused {
+ background-color:#333;
+}
+
+ul.playlist.dark li.sm2_paused a {
+ color:#999;
+}
+
+ul.playlist.dark li.sm2_playing,
+ul.playlist.dark li.sm2_playing:hover {
+ background-color:#333;
+}
+
+ul.playlist.dark li:hover .controls .statusbar {
+ background-color:#666;
+}
+
+ul.playlist.dark li .controls {
+ background-color:#333;
+}
+
+ul.playlist.dark li .controls .statusbar {
+ background-color:#666;
+ border-color:#444;
+}
+
+ul.playlist.dark li .controls .statusbar .position {
+ background-color:#111;
+ border-right:3px solid #111;
+ border-radius:3px;
+ -moz-border-radius:3px;
+ -webkit-border-radius:3px;
+}
+
+ul.playlist.dark li .controls .statusbar .loading {
+ background-color:#444;
+}
+
+ul.playlist.dark li .timing,
+ul.playlist.use-peak.dark li .peak {
+ background-color:#222;
+ border-color:#444;
+}
+
+ul.playlist.dark.use-peak li .peak .l,
+ul.playlist.dark.use-peak li .peak .r {
+ border-color:#444;
+ background-color:#999;
+}
+
+
+/* gold theme */
+
+ul.playlist.gold li.sm2_paused {
+ background-color:#996600;
+}
+
+ul.playlist.gold li.sm2_playing,
+ul.playlist.gold li.sm2_playing:hover {
+ background-color:#cc9900;
+}
+
+ul.playlist.gold li .controls {
+ background-color:transparent;
+}
+
+ul.playlist.gold li .controls .statusbar {
+ background-color:#fff;
+ border-color:#fff;
+}
+
+ul.playlist.gold li .controls .statusbar .position {
+ background-color:#996600;
+ border-right:3px solid #996600;
+ border-radius:3px;
+ -moz-border-radius:3px;
+ -webkit-border-radius:3px;
+}
+
+ul.playlist.gold li .controls .statusbar .loading {
+ background-color:#ffeedd;
+}
+
+ul.playlist.gold li .timing,
+ul.playlist.use-peak.gold li .peak {
+ background-color:#CC9900;
+ border-color:#ffcc33;
+}
+
+ul.playlist.use-spectrum.gold li.sm2_playing .spectrum-container {
+ background-color:#cc9900;
+ border-color:#ffcc33;
+}
+
+ul.playlist.use-spectrum.gold li.sm2_playing .spectrum-container .spectrum {
+ background-color:#fff;
+}
+
+ul.playlist.gold.use-peak li .peak .l,
+ul.playlist.gold.use-peak li .peak .r {
+ border-color:#fff;
+ background-color:#fff;
+}
+
+
+/* ZOMG PONIES!!!ONEONEONE */
+
+ul.playlist.bubblegum li a {
+ font-family:"comic sans ms",verdana,arial,tahoma,"sans serif"; /* heh */
+}
+
+ul.playlist.bubblegum li.sm2_paused,
+ul.playlist.bubblegum li.sm2_paused:hover {
+ background-color:#ffccee;
+}
+
+ul.playlist.bubblegum li.sm2_paused a,
+ul.playlist.bubblegum li.sm2_paused:hover a,
+ul.playlist.bubblegum li.sm2_paused .timing,
+ul.playlist.use-peak.bubblegum li.sm2_paused .peak {
+ color:#ff6699;
+}
+
+ul.playlist.bubblegum li:hover {
+ background-color:#ffddee;
+}
+
+ul.playlist.bubblegum li.sm2_playing,
+ul.playlist.bubblegum li.sm2_playing:hover {
+ background-color:#ff7799;
+}
+
+ul.playlist.bubblegum li .controls {
+ background-color:transparent;
+}
+
+ul.playlist.bubblegum li .controls .statusbar {
+ background-color:#fff;
+ border-color:#fff;
+}
+
+ul.playlist.bubblegum li .controls .statusbar .position {
+ background-color:#ffaacc;
+ border-right:3px solid #ffaacc;
+ border-radius:3px;
+ -moz-border-radius:3px;
+ -webkit-border-radius:3px;
+}
+
+ul.playlist.bubblegum li .controls .statusbar .loading {
+ background-color:#ffeedd;
+}
+
+ul.playlist.bubblegum li .timing,
+ul.playlist.use-peak.bubblegum li .peak {
+ background-color:#ffaacc;
+ border-color:#ffccee;
+}
+
+ul.playlist.use-spectrum.bubblegum li.sm2_playing .spectrum-container {
+ background-color:#ffaacc;
+ border-color:#ffccee;
+}
+
+ul.playlist.use-spectrum.bubblegum li.sm2_playing .spectrum-container .spectrum {
+ background-color:#fff;
+}
+
+ul.playlist.bubblegum.use-peak li .peak .l,
+ul.playlist.bubblegum.use-peak li .peak .r {
+ border-color:#fff;
+ background-color:#fff;
+}
+
+
+ul.playlist.shiny li.sm2_paused,
+ul.playlist.shiny li.sm2_playing {
+ background-image:url(../image/top-highlight.png);
+ background-repeat:repeat-x;
+ background-position:0px -1px;
+ _background-image:none; /* can't be bothered with IE 6. */
+}
