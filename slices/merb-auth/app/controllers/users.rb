@@ -5,9 +5,7 @@ class MerbAuth::Users < MerbAuth::Application
   
   private
   def login_required_unless_no_users
-    unless User.first.nil? && current_user
-      redirect "/"
-    end
+    login_required unless User.first.nil?
   end
   
 end
