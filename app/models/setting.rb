@@ -4,10 +4,10 @@ class Setting
   include DataMapper::Resource
   attr_accessor :password, :password_confirmation
   property :id, Integer, :serial => true
-  property :title, String
-  property :subtitle, String
-  property :header_background, String
-  property :header_foreground, String
+  property :title, String, :length => 1..150
+  property :subtitle, String, :length => 1..150
+  property :header_background, String, :length => 3..6
+  property :header_foreground, String, :length => 3..6
 
   def self.run_setup
     setting = Setting.new

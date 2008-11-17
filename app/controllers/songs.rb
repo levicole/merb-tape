@@ -1,5 +1,5 @@
 class Songs < Application
-  before :login_required, :only => [:create]
+  before :ensure_authenticated, :only => [:create]
   # ...and remember, everything returned from an action
   # goes to the client...
   def index
@@ -8,21 +8,34 @@ class Songs < Application
   end
   
   def new
+    @song = Song.new
     render
   end
   
-  def create
-    # params[:song].inspect
-    @song = Song.new(params[:song])
+  def create(song)
+    # song[:attachment].inspect
+    @song = Song.new(song)
     if @song.save
+      redirect "/admin"
+    else
+      @songs = Song.all
+      render :new, :template => "settings/index"
+    end
+  end
+  
+  def delete(id)
+    @song = Song.get(id)
+    if  @song.destroy
       redirect "/admin"
     end
   end
   
-  def delete
-    @song = Song.get(params[:id])
-    if  @song.destroy
+  def update(id)
+    @song = Song.get(id)
+    if @song.update_attributes[params[:song]]
       redirect "/admin"
+    else
+      render :index
     end
   end
   

@@ -1,0 +1,15 @@
+<div id="songs" class="ui-tabs-panel admin-panel">
+	<h3>Upload a new song.</h3>
+	<p>
+		<%= error_messages_for @song %>
+		<%= form_for Song.new, :action => resource(:songs) do %>
+			<label for"song">Song:</label><br />
+			<%= file_field :attachment %><br />
+			<p style="margin-top:10px">
+				<%= button "Upload", :class => "button positive"  %>
+			</p>
+		<% end =%>
+	</p>
+	
+	Or use an FTP client and upload your files.
+</div>

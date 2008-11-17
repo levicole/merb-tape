@@ -1,12 +1,8 @@
 class Settings < Application
-  before :login_required
+  before :ensure_authenticated
   # ...and remember, everything returned from an action
   # goes to the client...
-  def index
-    @songs = Song.all
-    render
-  end
-  
+
   def new
     @setting = Setting.new
     @user = User.new
@@ -16,23 +12,19 @@ class Settings < Application
   def create
     @setting = Setting.new(params[:setting])
     if @setting.save
-      redirect url('/admin')
+      redirect url(:root)
     end 
   end
   
   def update
     @setting = Setting.get(params[:id])
     if @setting.update_attributes(params[:setting])
-      redirect url(:admin)
+      redirect url(:root)
     end
   end
   
-  def login
-    if request.method == :post
-      
-    else
-      "false"
-    end
+  def update_user
+    
   end
   
 end

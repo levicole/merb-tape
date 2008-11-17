@@ -1,6 +1,8 @@
 class User
-  include MerbAuth::Adapter::DataMapper
-  include MerbAuth::Adapter::DataMapper::DefaultModelSetup
-
-
+  include DataMapper::Resource
+  Merb::Authentication.user_class = self
+  property :login, String
+  property :id, Integer, :serial => true
+  
+  
 end

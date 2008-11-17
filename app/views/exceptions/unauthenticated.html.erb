@@ -1,0 +1,13 @@
+<div class="login">
+	<%= form :action => url(:perform_login), :method => :put  do %>
+		<p>
+			<%= text_field :login, :label => "Login" %>
+		</p>
+		<p>
+			<%= password_field :password, :label => "Password", :class => "text" %>
+		</p>
+		<p>
+			<%= submit "Login" %>
+		</p>
+	<% end =%>
+</div>

@@ -9,5 +9,5 @@ class Exceptions < Application
   def not_acceptable
     render :format => :html
   end
-
+  
 end

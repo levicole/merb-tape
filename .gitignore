@@ -2,3 +2,4 @@ log/*.log
 config/database.yml
 tmp/
 config.ru
+public/songs/*

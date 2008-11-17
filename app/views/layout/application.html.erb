@@ -16,15 +16,26 @@
   </head>
   <body>
 	<div id="header">
-			<h2>
-				<%= link_to @setting.title, url(:root) %>
-			</h2>
-			<h3>
-				<%= link_to @setting.subtitle, url(:root) %>
-			</h3>
+			<div id="titles">
+				<h2>
+					<%= link_to @setting.title, url(:root) %>
+				</h2>
+				<h3>
+					<%= link_to @setting.subtitle, url(:root) %>
+				</h3>
+			</div>
+			<% if logged_in? %>
+				<div id="admin_link">
+					<a href="#">settings</a>
+				</div>
+			<% end %>
+
 	</div>
     <div id="container">
     	<%= catch_content :for_layout %>
     </div>
+		<% if logged_in? %>
+			<%= partial("shared/admin_interface") %>
+		<% end %>
   </body>
 </html>
